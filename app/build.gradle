@@ -37,7 +37,6 @@ dependencies {
 
     // JAR local dependency
     implementation files('libs/WorkSchedule.jar')
-
     implementation name: 'WorkSchedule' //local
 }
 
@@ -49,4 +48,4 @@ test {
     }
 }
 
-mainClassName = 'workschedule.WorkcheduleExample'
+mainClassName = 'workschedule.WorkScheduleExample'
