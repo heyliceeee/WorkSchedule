@@ -93,4 +93,30 @@ public class WorkScheduleExampleTest {
 
         assertArrayEquals(expected, actual);
     }
+
+    // nextIncomplete method
+    @Test
+    public void testNextIncomplete_ReturnTime_Valid(){
+        wSchedule.setRequiredNumber(6, 3, 6); // nº necessário de employees para trabalhar naquela hora
+
+        //ja tinha feito addWorkingPeriod a 3 employees...
+
+        assertEquals(3, wSchedule.nextIncomplete(3));
+    }
+
+    @Test
+    public void testNextIncomplete_ReturnIndexOutOfBoundsException_Valid(){
+        wSchedule.setRequiredNumber(6, 3, 6); // nº necessário de employees para trabalhar naquela hora
+
+        String actual = "";
+
+        try {
+            wSchedule.nextIncomplete(-2);
+
+        } catch (IndexOutOfBoundsException e) {
+            actual = "error";
+        }
+
+        assertEquals("error", actual);
+    }
 }
