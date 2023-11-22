@@ -14,7 +14,7 @@ plugins {
 
 jar {
     manifest {
-        attributes 'Main-Class': 'workschedule.Main'
+        attributes 'Main-Class': 'workschedule.WorkScheduleExample'
     }
 }
 
@@ -49,4 +49,4 @@ test {
     }
 }
 
-mainClassName = 'workschedule.Main'
+mainClassName = 'workschedule.WorkcheduleExample'
